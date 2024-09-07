@@ -1,6 +1,7 @@
 # BankCardSimulation
 
 ## Description
+(Watch the demo_video for demonstration)
 The Bank Management System is a virtual simulation of a banking interface designed to mimic real-world banking operations. This application initiates with a login page that offers two options:
 
 Sign In: Users can enter their card number and PIN to access their accounts.
