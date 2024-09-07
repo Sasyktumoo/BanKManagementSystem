@@ -17,10 +17,9 @@ public class SignUp extends JFrame implements ActionListener {
     String application_num = " " + Math.abs(transform);
 
 
-    private JButton next_page_button;
     private JRadioButton maleRadioButton, femaleRadioButton, marriedRadioButton, unmarriedRadioButton, otherRadioButton;
 
-    private JTextField nameTextField, fatherNameTextField, emailTextField, addressTextField, cityTextField, stateTextField, pinCodeTextField;
+    private JTextField nameTextField, lastNameTextField, emailTextField, addressTextField, cityTextField, stateTextField, pinCodeTextField;
     private JDateChooser dateOfBirthChooser;
 
     public SignUp() {
@@ -55,9 +54,9 @@ public class SignUp extends JFrame implements ActionListener {
         nameTextField = createTextField(300, 190, 400, 30);
         add(nameTextField);
 
-        add(createLabel("Father's Name :", new Font("Raleway", Font.BOLD, 20), 100, 240, 200, 30));
-        fatherNameTextField = createTextField(300, 240, 400, 30);
-        add(fatherNameTextField);
+        add(createLabel("Last Name :", new Font("Raleway", Font.BOLD, 20), 100, 240, 200, 30));
+        lastNameTextField = createTextField(300, 240, 400, 30);
+        add(lastNameTextField);
 
         add(createLabel("Gender", new Font("Raleway", Font.BOLD, 20), 100, 290, 200, 30));
         maleRadioButton = createRadioButton("Male", 300, 290, 60, 30);
@@ -77,8 +76,11 @@ public class SignUp extends JFrame implements ActionListener {
 
         add(createLabel("Marital Status :", new Font("Raleway", Font.BOLD, 20), 100, 440, 200, 30));
         marriedRadioButton = createRadioButton("Married", 300, 440, 100, 30);
+        add(marriedRadioButton);
         unmarriedRadioButton = createRadioButton("Unmarried", 450, 440, 100, 30);
+        add(unmarriedRadioButton);
         otherRadioButton = createRadioButton("Other", 635, 440, 100, 30);
+        add(otherRadioButton);
         ButtonGroup maritalStatusGroup = new ButtonGroup();
         addRadioButtonsToGroup(maritalStatusGroup, marriedRadioButton, unmarriedRadioButton, otherRadioButton);
 
@@ -103,8 +105,8 @@ public class SignUp extends JFrame implements ActionListener {
         add(stateTextField);
 
 
-        next_page_button = createActionButton(this, "next", 620, 710, 80, 30);
-        add(next_page_button);
+        add(createActionButton(this, "next", 620, 710, 80, 30));
+
     }
 
 
@@ -114,7 +116,7 @@ public class SignUp extends JFrame implements ActionListener {
 
         String formNumber = application_num;
         String applicantName = nameTextField.getText();
-        String fatherName = fatherNameTextField.getText();
+        String fatherName = lastNameTextField.getText();
         String dateOfBirth = ((JTextField) dateOfBirthChooser.getDateEditor().getUiComponent()).getText();
         String gender = null;
         if (maleRadioButton.isSelected()) {

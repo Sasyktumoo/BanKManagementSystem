@@ -52,7 +52,7 @@ public class Deposit extends JFrame implements ActionListener {
                 } else {
                     SQL_connection connection = new SQL_connection();
                     connection.statement.executeUpdate("insert into Bank values('"+accountPin+"', '"+currentDate+"','Deposit', '"+amount+"')");
-                    JOptionPane.showMessageDialog(null, "Rs. "+amount+" Deposited Successfully");
+                    JOptionPane.showMessageDialog(null, "HKD "+amount+" Deposited Successfully");
                     setVisible(false);
                     new MainMenu(accountPin);
                 }

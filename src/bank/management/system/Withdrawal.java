@@ -22,7 +22,7 @@ public class Withdrawal extends JFrame implements ActionListener {
         JLabel backgroundLabel = createImageLabel("icon/atm_machine_frame.png", 0, 0, 1550, 830);
         add(backgroundLabel);
 
-        JLabel maxWithdrawalLabel = createLabel("MAXIMUM WITHDRAWAL IS RS.10,000", new Font("System", Font.BOLD, 16), 460, 180, 700, 35, Color.WHITE);
+        JLabel maxWithdrawalLabel = createLabel("MAXIMUM WITHDRAWAL IS 10,000 HKD", new Font("System", Font.BOLD, 16), 460, 180, 700, 35, Color.WHITE);
         backgroundLabel.add(maxWithdrawalLabel);
 
         JLabel enterAmountLabel = createLabel("PLEASE ENTER YOUR AMOUNT", new Font("System", Font.BOLD, 16), 460, 220, 400, 35, Color.WHITE);
@@ -32,11 +32,11 @@ public class Withdrawal extends JFrame implements ActionListener {
         backgroundLabel.add(amountTextField);
 
         withdrawButton = createActionButton(this, "WITHDRAW", 700, 362, 150, 35);
-        withdrawButton.setBackground(new Color(65,125,128)); // Adjusting colors as per original code.
+        withdrawButton.setBackground(new Color(65,125,128));
         backgroundLabel.add(withdrawButton);
 
         backButton = createActionButton(this, "BACK", 700, 406, 150, 35);
-        backButton.setBackground(new Color(65,125,128)); // Adjusting colors as per original code.
+        backButton.setBackground(new Color(65,125,128));
         backgroundLabel.add(backButton);
 
         setLayout(null);
@@ -70,7 +70,7 @@ public class Withdrawal extends JFrame implements ActionListener {
                     }
 
                     connection.statement.executeUpdate("insert into Bank values('"+pinNumber+"', '"+currentDate+"', 'Withdrawl', '"+amount+"' )");
-                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
+                    JOptionPane.showMessageDialog(null, "HKD" + amount + " Debited Successfully");
                     setVisible(false);
                     new MainMenu(pinNumber);
 

@@ -55,7 +55,7 @@ public class BankStatement extends JFrame implements ActionListener {
                     balance -= Integer.parseInt(rsTransactions.getString("amount"));
                 }
             }
-            balanceLabel.setText("Your Total Balance is Rs " + balance);
+            balanceLabel.setText("Your Total Balance is HKD " + balance);
         } catch (Exception e) {
             e.printStackTrace();
         }

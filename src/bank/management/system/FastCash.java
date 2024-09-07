@@ -23,22 +23,22 @@ public class FastCash extends JFrame implements ActionListener {
         JLabel titleLabel = createLabel("SELECT WITHDRAWAL AMOUNT", new Font("System", Font.BOLD, 23), 445, 180, 700, 35, Color.WHITE);
         backgroundLabel.add(titleLabel);
 
-        withdraw100Button = createActionButton(this, "Rs. 100", 410, 274, 150, 35, defaultButtonColor);
+        withdraw100Button = createActionButton(this, "HKD 100", 410, 274, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw100Button);
 
-        withdraw500Button = createActionButton(this, "Rs. 500", 700, 274, 150, 35, defaultButtonColor);
+        withdraw500Button = createActionButton(this, "HKD 500", 700, 274, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw500Button);
 
-        withdraw1000Button = createActionButton(this, "Rs. 1000", 410, 318, 150, 35, defaultButtonColor);
+        withdraw1000Button = createActionButton(this, "HKD 1000", 410, 318, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw1000Button);
 
-        withdraw2000Button = createActionButton(this, "Rs. 2000", 700, 318, 150, 35, defaultButtonColor);
+        withdraw2000Button = createActionButton(this, "HKD 2000", 700, 318, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw2000Button);
 
-        withdraw5000Button = createActionButton(this, "Rs. 5000", 410, 362, 150, 35, defaultButtonColor);
+        withdraw5000Button = createActionButton(this, "HKD 5000", 410, 362, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw5000Button);
 
-        withdraw10000Button = createActionButton(this, "Rs. 10000", 700, 362, 150, 35, defaultButtonColor);
+        withdraw10000Button = createActionButton(this, "HKD 10000", 700, 362, 150, 35, defaultButtonColor);
         backgroundLabel.add(withdraw10000Button);
 
         backButton = createActionButton(this, "BACK", 700, 406, 150, 35, defaultButtonColor);
@@ -76,7 +76,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
 
                 connection.statement.executeUpdate("insert into bank values('"+accountPin+"', '"+currentDate+"', 'withdrawal', '"+amount+"')");
-                JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully");
+                JOptionPane.showMessageDialog(null, "HKD " + amount + " Debited Successfully");
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
